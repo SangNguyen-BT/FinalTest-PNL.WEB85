@@ -28,6 +28,9 @@ app.use("/api", teacherRoute)
 app.use("/api", teacherPositionRoute)
 app.use("/api", userRoute)
 
+app.get("/", (req, res) => {
+  res.json({message: "API is working"})
+})
 
 app.listen(port, () => {
   console.log("Server is working on PORT: " + port);
